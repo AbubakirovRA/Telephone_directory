@@ -1,7 +1,4 @@
 def reader():
-    data = open('dictionary.txt', 'r') 
-    print(data.read())
-    
-    data.close()
-
-reader()
+    with open('dictionary.txt', 'r') as file:
+        for item in file:
+            print(item)
