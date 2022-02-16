@@ -5,7 +5,7 @@ def export(file_name):
     with open('dictionary.txt', 'r', encoding='utf-8') as file:
         d = {" ".join(i.replace("\n", "").split(" ")) for i in file}
     for j in d:
-        html += f'    {j} <br>\n'
+        html += f'    <p {style}> {j} </p>\n'
     html += '  </body>\n</html>'
     
     with open(file_name+'.html', 'w') as page:
